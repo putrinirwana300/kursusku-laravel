@@ -1,29 +1,109 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+/* =========================================
+   GLOBAL STYLE (Dari Bootstrap & Anda)
+   ========================================= */
 body { 
     background: #f5f7f6; 
     color: #17312b; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
+.navbar { 
     background-color: #0f766e !important; 
 }
-.navbar-brand {
-    font-weight: 800;
-    color: white !important;
-}
-.nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
-}
-.nav-link:hover {
-    color: white !important;
+
+.navbar-brand { 
+    font-weight: 800; 
+    color: white !important; 
 }
 
-.btn-success {
-    background-color: #0f766e;
-    border-color: #0f766e;
+.nav-link { 
+    color: rgba(255, 255, 255, 0.8) !important; 
 }
-.btn-success:hover {
-    background-color: #0b5f55;
-    border-color: #0b5f55;
+
+.nav-link:hover { 
+    color: white !important; 
+}
+
+.btn-success { 
+    background-color: #0f766e; 
+    border-color: #0f766e; 
+}
+
+.btn-success:hover { 
+    background-color: #0b5f55; 
+    border-color: #0b5f55; 
+}
+
+/* =========================================
+   OVERRIDE NAVBAR (AGAR SAMA SEPERTI PROTOTYPE)
+   ========================================= */
+
+/* 1. Style untuk Header Judul Besar */
+.header {
+    background-color: #0f766e;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+/* 2. Style untuk Menu Navigasi (Dipaksa ke Tengah & Rapat) */
+nav.navbar {
+    background-color: #115e59 !important;
+    display: flex !important;
+    justify-content: center !important; 
+    padding: 15px 0 !important;
+}
+
+/* Memastikan container di dalam navbar tidak memaksa lebar */
+nav.navbar .container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 30px !important; /* Jarak antar menu, sesuaikan jika perlu */
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Memaksa ukuran font dan menghapus padding bawaan Bootstrap pada link */
+nav.navbar a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px !important; /* SAMA DENGAN PROTOTYPE */
+    padding: 0 !important;
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+nav.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* 3. Styling untuk form-card (agar card form pendaftaran rapi) */
+.section {
+    padding: 40px 0;
+}
+
+.form-card, .summary-card {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #d9e6e2;
+    border-radius: 1rem;
 }

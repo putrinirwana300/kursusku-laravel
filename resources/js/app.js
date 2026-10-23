@@ -2,9 +2,10 @@ import './bootstrap';
 import 'bootstrap';
 import $ from 'jquery';
 window.$ = window.jQuery = $;
+
+// Kode Ajax untuk cek sisa kursi (Letakkan di paling bawah)
 $(document).on('change', '#course_id', function () {
     const id = this.value;
-    
     if (!id) {
         $('#availability')
             .removeClass('alert-success alert-danger')

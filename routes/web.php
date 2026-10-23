@@ -7,12 +7,12 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 $coursesData = [
-    1 => ['name' => 'Web Dasar', 'fee' => 200000, 'quota' => 30, 'registered' => 12],
-    2 => ['name' => 'PHP Dasar', 'fee' => 250000, 'quota' => 30, 'registered' => 18],
-    3 => ['name' => 'PHP Lanjutan', 'fee' => 300000, 'quota' => 25, 'registered' => 24],
-    4 => ['name' => 'Laravel Fundamental', 'fee' => 350000, 'quota' => 25, 'registered' => 25],
-    5 => ['name' => 'MySQL Dasar', 'fee' => 275000, 'quota' => 20, 'registered' => 0],
-    6 => ['name' => 'UI Web Dasar', 'fee' => 225000, 'quota' => 35, 'registered' => 9],
+    1 => ['name' => 'Web Dasar', 'quota' => 30, 'registered' => 12],
+    2 => ['name' => 'PHP Dasar', 'quota' => 30, 'registered' => 18],
+    3 => ['name' => 'PHP Lanjutan', 'quota' => 25, 'registered' => 24],
+    4 => ['name' => 'Laravel Fundamental', 'quota' => 25, 'registered' => 25],
+    5 => ['name' => 'MySQL Dasar', 'quota' => 20, 'registered' => 0],
+    6 => ['name' => 'UI Web Dasar', 'quota' => 35, 'registered' => 9],
 ];
 
 Route::get('/pendaftaran', function () use ($coursesData) {

@@ -3,7 +3,7 @@
 @section('title', 'Beranda - KursusKu')
 
 @section('content')
-<!-- 1. HERO -->
+<!-- HERO -->
 <section id="beranda" class="hero">
     <div class="container">
         <div class="hero-content">
@@ -21,7 +21,7 @@
     </div>
 </section>
 
-<!-- 2. KEUNGGULAN -->
+<!-- KEUNGGULAN -->
 <section id="keunggulan" class="section">
     <div class="container">
         <h2>Mengapa Memilih KursusKu?</h2>
@@ -42,7 +42,7 @@
     </div>
 </section>
 
-<!-- 3. KATALOG KURSUS (Tabel Lengkap) -->
+<!-- KATALOG -->
 <section id="kursus" class="section section-light">
     <div class="container">
         <h2>Katalog Kursus</h2>
@@ -79,7 +79,7 @@
     </div>
 </section>
 
-<!-- 4. CARA MENDAFTAR -->
+<!-- CARA DAFTAR -->
 <section id="alur" class="section">
     <div class="container">
         <h2>Cara Mendaftar</h2>
@@ -108,28 +108,18 @@
     </div>
 </section>
 
-<!-- 5. TENTANG -->
-<section id="tentang" class="section section-light">
-    <div class="container">
-        <h2>Tentang KursusKu</h2>
-        <p>KursusKu merupakan prototype website pembelajaran yang dikembangkan dalam mata kuliah Pemrograman Web III.</p>
-        <p>Pada semester ini mahasiswa akan belajar PHP, MySQL dan framework Laravel.</p>
-        <a href="https://laravel.com" target="_blank" rel="noopener">Pelajari Laravel</a>
-    </div>
-</section>
-
-<!-- 6. MEDIA / VIDEO -->
-<section id="media" class="section">
+<!-- VIDEO -->
+<section id="media" class="section section-light">
     <div class="container">
         <h2>Video Pembelajaran</h2>
-        <div style="text-align: center; margin-top: 20px;">
-            <iframe width="342" height="607" src="https://www.youtube.com/embed/nQinn48Bk2g" title="Kenapa Laravel Masih Banyak Yang Pake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div style="text-align:center; margin-top:20px;">
+            <iframe width="342" height="607" src="https://www.youtube.com/embed/nQinn48Bk2g" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </section>
 
-<!-- 7. KONTAK -->
-<section id="kontak" class="section section-light">
+<!-- KONTAK -->
+<section id="kontak" class="section">
     <div class="container">
         <h2>Kontak</h2>
         <p>Informasi lebih lanjut mengenai program KursusKu dapat diperoleh melalui halaman ini.</p>
