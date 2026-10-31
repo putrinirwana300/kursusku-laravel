@@ -54,6 +54,7 @@
                         <option value="">-- Pilih metode --</option>
                         <option value="Online" {{ old('metode') == 'Online' ? 'selected' : '' }}>Online</option>
                         <option value="Offline" {{ old('metode') == 'Offline' ? 'selected' : '' }}>Offline</option>
+                        <option value="Hybrid (Online+Offline)" {{ old('metode') == 'Online' ? 'selected' : '' }}>Hybrid (Online+Offline)</option>
                     </select>
                 </div>
 

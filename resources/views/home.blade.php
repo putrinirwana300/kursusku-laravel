@@ -12,7 +12,7 @@
                 <p>Platform belajar teknologi untuk mahasiswa yang ingin meningkatkan kemampuan pemrograman web.</p>
                 <a href="#kursus" class="button">Lihat Kursus</a>
                 <a href="#" class="button">Lihat Estimasi Biaya</a>
-                <a href="{{ route('enrollments.create') }}" class="button">Daftar Kursus</a>
+                <a href="{{ route('enrollments.create') }}" class="button">Pendaftaran Kursus</a>
             </div>
             <div>
                 <img src="{{ asset('images/hero-kursus.jpg') }}" alt="Mahasiswa belajar" class="hero-image">

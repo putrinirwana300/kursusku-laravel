@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CourseController; // <-- TAMBAHKAN INI
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -34,3 +35,5 @@ Route::get('/courses/{course}/availability', function (int $course) use ($course
     $remaining = max(0, $data['quota'] - $data['registered']);
     return response()->json(['course' => $data['name'], 'remaining' => $remaining]);
 })->name('courses.availability');
+
+Route::resource('courses', CourseController::class); // <-- TAMBAHKAN INI DI PALING BAWAH

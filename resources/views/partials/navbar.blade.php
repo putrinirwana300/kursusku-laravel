@@ -12,5 +12,5 @@
     <a href="#alur" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Cara Daftar</a>
     <a href="#media" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Media</a>
     <a href="#kontak" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Kontak</a>
-    <a href="{{ route('enrollments.create') }}" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Daftar Kursus</a>
+    <a href="{{ route('enrollments.create') }}" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Pendaftaran Kursus</a>
 </nav>
