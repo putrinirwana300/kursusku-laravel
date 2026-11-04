@@ -9,28 +9,24 @@
     <form method="POST" action="{{ route('courses.store') }}" class="card card-body">
         @csrf
 
-        <!-- Kode Kursus -->
         <div class="mb-3">
             <label class="form-label" for="code">Kode Kursus</label>
             <input class="form-control" id="code" name="code" value="{{ old('code') }}" required maxlength="20">
             @error('code') <div class="text-danger small">{{ $message }}</div> @enderror
         </div>
 
-        <!-- Nama Kursus -->
         <div class="mb-3">
             <label class="form-label" for="name">Nama Kursus</label>
             <input class="form-control" id="name" name="name" value="{{ old('name') }}" required maxlength="120">
             @error('name') <div class="text-danger small">{{ $message }}</div> @enderror
         </div>
 
-        <!-- Deskripsi -->
         <div class="mb-3">
             <label class="form-label" for="description">Deskripsi</label>
             <textarea class="form-control" id="description" name="description" rows="3">{{ old('description') }}</textarea>
             @error('description') <div class="text-danger small">{{ $message }}</div> @enderror
         </div>
 
-        <!-- Biaya & Kuota -->
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label class="form-label" for="fee">Biaya</label>
@@ -45,7 +41,6 @@
             </div>
         </div>
 
-        <!-- Tanggal Mulai & Status -->
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label class="form-label" for="start_date">Tanggal Mulai</label>
@@ -64,7 +59,6 @@
             </div>
         </div>
 
-        <!-- Tombol Submit -->
         <div class="d-flex gap-2 mt-3">
             <button class="btn btn-primary" type="submit">Simpan Kursus</button>
             <a class="btn btn-outline-secondary" href="{{ route('courses.index') }}">Batal</a>

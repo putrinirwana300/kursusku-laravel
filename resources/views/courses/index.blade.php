@@ -30,6 +30,7 @@
                             <th>Kuota</th>
                             <th>Mulai</th>
                             <th>Status</th>
+                            <th>Aksi</th> <!-- KOLOM AKSI DITAMBAHKAN -->
                         </tr>
                     </thead>
                     <tbody>
@@ -41,10 +42,22 @@
                                 <td>{{ $course->quota }}</td>
                                 <td>{{ $course->start_date->format('d/m/Y') }}</td>
                                 <td>{{ ucfirst($course->status) }}</td>
+                                <td>
+                                    <!-- TOMBOL AKSI DITAMBAHKAN -->
+                                    <div class="d-flex gap-1">
+                                        <a href="{{ route('courses.show', $course) }}" class="btn btn-sm btn-outline-primary">Detail</a>
+                                        <a href="{{ route('courses.edit', $course) }}" class="btn btn-sm btn-outline-warning">Edit</a>
+                                        <form method="POST" action="{{ route('courses.destroy', $course) }}" onsubmit="return confirm('Hapus kursus ini?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                        </form>
+                                    </div>
+                                </td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="6" class="text-center py-4 text-muted">
+                                <td colspan="7" class="text-center py-4 text-muted">
                                     Belum ada data kursus.
                                 </td>
                             </tr>

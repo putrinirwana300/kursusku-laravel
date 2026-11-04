@@ -6,19 +6,38 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'KursusKu')</title>
     
-    <!-- Memanggil CSS dan JS dari Vite (Bootstrap & jQuery) -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    
-    <!-- (Opsional) Tetap panggil CSS lama Anda jika masih butuh -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <!-- Memanggil Navbar -->
-    @include('partials.navbar')
 
+    <!-- HEADER (JUDUL BESAR) -->
+    <header class="header">
+        <div class="container" style="text-align: center;">
+            <h1 style="margin: 0; color: white; font-weight: bold; font-size: 32px;">KursusKu</h1>
+            <p style="margin: 5px 0 0 0; color: #d1d5db; font-size: 14px;">Belajar Teknologi, Bangun Masa Depan</p>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- Link Lama -->
+        <a href="{{ route('home') }}" class="nav-link">Beranda</a>
+        <a href="#keunggulan" class="nav-link">Keunggulan</a>
+        <a href="#kursus" class="nav-link">Katalog</a>
+        <a href="#alur" class="nav-link">Cara Daftar</a>
+        <a href="#media" class="nav-link">Media</a>
+        <a href="#kontak" class="nav-link">Kontak</a>
+        <a href="{{ route('enrollments.create') }}" class="nav-link">Pendaftaran Kursus</a>
+
+        <!-- LINK BARU: Dipindah ke paling kanan -->
+        <a href="{{ route('courses.index') }}" class="nav-link">KursusKu</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
     <main class="container py-4">
-        <!-- Tempat konten halaman (form, tabel, dll) akan dimasukkan -->
         @yield('content')
     </main>
+
 </body>
 </html>

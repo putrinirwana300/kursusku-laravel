@@ -1,0 +1,17 @@
+# AI Usage Log - Pertemuan 11
+
+Dokumen ini mencatat penggunaan AI selama pengerjaan Praktikum Pemrograman Web III Pertemuan 11.
+
+| Prompt / pertanyaan | Saran AI | Dipakai? | Alasan |
+| :--- | :--- | :---: | :--- |
+| Kenapa muncul error "View [courses.show] not found" saat membuka detail? | AI menyarankan untuk membuat file `show.blade.php` dan mengisi method `show()` di Controller. | Ya | File view dan method memang belum dibuat, sesuai panduan. |
+| Kenapa muncul error "syntax error, unexpected token public" di StoreCourseRequest? | AI menyarankan untuk memeriksa penutupan kurung kurawal pada method `authorize()`. | Ya | Ada kurung kurawal yang kurang saat copy-paste kode. |
+| Kenapa muncul error "Undefined variable $course" di halaman create? | AI menyarankan untuk menghapus semua pemanggilan `$course->...` di file create. | Ya | File `create.blade.php` masih menyalin kode dari `edit.blade.php`. |
+| Kenapa tombol Detail, Edit, dan Hapus tidak muncul di index? | AI memberikan kode untuk menambahkan kolom "Aksi" dan tombol-tombol tersebut di `index.blade.php`. | Ya | Kode belum ditambahkan sebelumnya. |
+| Bagaimana cara membuat laporan test matrix? | AI memberikan template tabel Markdown berisi 15 skenario pengujian. | Ya | Template sangat membantu, tinggal disesuaikan dengan hasil aktual. |
+
+## Catatan Penting
+
+*   Seluruh kode yang disarankan oleh AI telah **diuji secara manual** di browser dan terminal.
+*   Saya dapat **menjelaskan alur logika** dari setiap kode yang diterapkan.
+*   AI digunakan sebagai **tutor** untuk membantu *debugging* dan memberikan referensi sintaks.

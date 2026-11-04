@@ -6,6 +6,7 @@
 </header>
 
 <nav style="background-color: #115e59; display: flex; justify-content: center; padding: 15px 0; gap: 30px;">
+    <!-- Link Lama -->
     <a href="{{ route('home') }}" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Beranda</a>
     <a href="#keunggulan" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Keunggulan</a>
     <a href="#kursus" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Katalog</a>
@@ -13,4 +14,7 @@
     <a href="#media" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Media</a>
     <a href="#kontak" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Kontak</a>
     <a href="{{ route('enrollments.create') }}" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">Pendaftaran Kursus</a>
+
+    <!-- LINK BARU: Dipindah ke paling kanan -->
+    <a href="{{ route('courses.index') }}" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">KursusKu</a>
 </nav>
