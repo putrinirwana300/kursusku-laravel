@@ -3,8 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\CourseController; // <-- TAMBAHKAN INI
+use App\Http\Controllers\CourseController; 
+use App\Http\Controllers\EnrollmentController;
 
+Route::resource('admin/enrollments', EnrollmentController::class)
+    ->only(['index', 'create', 'store'])
+    ->names([
+        'index' => 'admin.enrollments.index',
+        'create' => 'admin.enrollments.create',
+        'store' => 'admin.enrollments.store',
+    ]);
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 $coursesData = [
