@@ -22,6 +22,11 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <!-- Link Lama -->
+        @if(Auth::check())
+    <a href="{{ route('profile') }}" class="nav-link">Admin</a>
+@else
+    <a href="{{ route('login') }}" class="nav-link">Login</a>
+@endif
         <a href="{{ route('home') }}" class="nav-link">Beranda</a>
         <a href="#keunggulan" class="nav-link">Keunggulan</a>
         <a href="#kursus" class="nav-link">Katalog</a>

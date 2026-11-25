@@ -5,6 +5,18 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController; 
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\AuthController; // <-- TAMBAHAN: Import AuthController
+
+// --- RUTE LOGIN & PROFIL (TAMBAHAN BARU) ---
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Halaman profil hanya bisa diakses jika sudah login (middleware auth)
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
+});
+// -------------------------------------------
 
 Route::resource('admin/enrollments', EnrollmentController::class)
     ->only(['index', 'create', 'store'])
@@ -13,6 +25,7 @@ Route::resource('admin/enrollments', EnrollmentController::class)
         'create' => 'admin.enrollments.create',
         'store' => 'admin.enrollments.store',
     ]);
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 $coursesData = [
@@ -44,4 +57,4 @@ Route::get('/courses/{course}/availability', function (int $course) use ($course
     return response()->json(['course' => $data['name'], 'remaining' => $remaining]);
 })->name('courses.availability');
 
-Route::resource('courses', CourseController::class); // <-- TAMBAHKAN INI DI PALING BAWAH
+Route::resource('courses', CourseController::class); 
